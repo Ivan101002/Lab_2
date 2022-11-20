@@ -63,39 +63,7 @@ Manager;
 
 Код скрипта, который отвечает за соприкосновения сферы и куба, конкретнее отвечает за то, чтобы
 объект "куб" перекрашивался при активации и деактивации триггера. Также код выводит сообщения в консоль.
-```c#
 
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class CheckCollider : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    private void OnTriggerEnter(Collider other) {
-        Debug.Log(other.gameObject.name);
-        other.GetComponent<Renderer>().material.SetColor("_Color", Color.green);
-    }
-
-    private void OnTriggerExit(Collider other) {
-        Debug.Log("Завершил столкновение с " + other.gameObject.name);
-        other.GetComponent<Renderer>().material.SetColor("_Color", Color.red);
-    }
-}
-
-
-```
 
 
 
